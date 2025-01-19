@@ -1,10 +1,15 @@
 
 import './App.css'
-
+import Header from './components/Header.jsx'
+import Home from './components/Home.jsx'
+import AllCourses from './components/AllCourses.jsx'
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+    <Header/>
+    <Home/>
+    <AllCourses/>
+      
     </>
   )
 }
