@@ -1,4 +1,4 @@
-import { Card,CardBody,CardTitle,CardSubtitle,CardText,CardFooter,Button,Container } from "reactstrap";
+import { Card,CardBody,CardSubtitle,CardText,Button,Container } from "reactstrap";
 
 function Course({course}){
     return(<div>
