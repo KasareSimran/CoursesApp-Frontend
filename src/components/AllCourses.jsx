@@ -21,9 +21,7 @@ function AllCourses(){
                 //for success
                 console.log(response.data)
                 
-                toast.success("Course has been loaded",{
-                    position:'bottom-center'
-                })
+                toast.success("Course has been loaded")
                 setCourses(response.data);
                 
 
