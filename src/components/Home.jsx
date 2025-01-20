@@ -1,6 +1,7 @@
 import { Container,Button} from 'reactstrap'
 import { useEffect } from 'react'
 
+
 function Home(){
     useEffect(()=>{
             document.title="Home || Courses App"
