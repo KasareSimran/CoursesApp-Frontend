@@ -1,6 +1,10 @@
 import { Container,Button} from 'reactstrap'
+import { useEffect } from 'react'
 
 function Home(){
+    useEffect(()=>{
+            document.title="Home || Courses App"
+        },[])
     return(<div>
         <Container className='text-center   p-5 my-2 bg-light border rounded shadow' style={{ backgroundColor: '#f8f9fa' }}>
             <h1 className='display-3'>Hello world</h1>

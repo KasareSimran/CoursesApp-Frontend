@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Course from '../components/Course.jsx'
 
 function AllCourses(){
@@ -12,6 +12,10 @@ function AllCourses(){
 
         ]
     )
+
+    useEffect(()=>{
+        document.title="All Courses"
+    },[])
     return(<div>
         <h1>All courses</h1>
         <p>List of courses are as follow:</p>
