@@ -1,15 +1,19 @@
 
-import { ListGroup,ListGroupItem } from "reactstrap";
+import { ListGroup } from "reactstrap";
+import { Link } from "react-router-dom";
 
-function Menu(){
-    return(
-        <ListGroup>
-            <ListGroupItem tag='a' href="/home" action>Home</ListGroupItem>
-            <ListGroupItem tag='a' href="/add-course" action>Add course</ListGroupItem>
-            <ListGroupItem tag='a' href="/all-courses" action>View Courses</ListGroupItem>
-            <ListGroupItem tag='a' href="#!" action>About</ListGroupItem>
-            <ListGroupItem tag='a' href="#!" action>Contact</ListGroupItem>
-        </ListGroup>
+function Menu() {
+    return (
+        <div>
+            <ListGroup>
+                <Link tag="a" to="/home" action>Home</Link>
+                <Link tag="a" to="/add-course" action>Add Course</Link>
+                <Link tag="a" to="/all-courses" action>View Courses</Link>
+                <Link tag="a" to="#!" action>About</Link>
+                <Link tag="a" to="#!" action>Contact</Link>
+            </ListGroup>
+        </div>
     );
 }
-export default Menu
+
+export default Menu;
