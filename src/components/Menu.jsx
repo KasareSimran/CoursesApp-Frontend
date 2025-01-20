@@ -6,11 +6,11 @@ function Menu() {
     return (
         <div>
             <ListGroup>
-                <Link tag="a" to="/home" action>Home</Link>
-                <Link tag="a" to="/add-course" action>Add Course</Link>
-                <Link tag="a" to="/all-courses" action>View Courses</Link>
-                <Link tag="a" to="#!" action>About</Link>
-                <Link tag="a" to="#!" action>Contact</Link>
+                <Link className='list-group-item list-group-item-action' tag="a" to="/home" action>Home</Link>
+                <Link className='list-group-item list-group-item-action' tag="a" to="/add-course" action>Add Course</Link>
+                <Link className='list-group-item list-group-item-action' tag="a" to="/all-courses" action>View Courses</Link>
+                <Link className='list-group-item list-group-item-action' tag="a" to="#!" action>About</Link>
+                <Link className='list-group-item list-group-item-action' tag="a" to="#!" action>Contact</Link>
             </ListGroup>
         </div>
     );
