@@ -30,7 +30,7 @@ function AddCourse (){
                 console.log(response)
                 console.log("success");
                 toast.success("Course added successfully");
-        
+                
             },
             (error)=>{
                 console.log(error)
