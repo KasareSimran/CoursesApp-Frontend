@@ -2,9 +2,11 @@ import { Card,CardBody,CardSubtitle,CardText,Button,Container } from "reactstrap
 import axios from 'axios'
 import main_url from "../api/bootapi";
 import {toast} from 'react-toastify'
+import { useNavigate } from "react-router-dom";
 
 function Course({course}){
 
+    const navigate = useNavigate();
     const deleteCourse=(id)=>{
 
         axios.delete(`${main_url}/courses/${id}`).then(
@@ -18,6 +20,11 @@ function Course({course}){
 
     }
 
+    const handleUpdate = () => {
+        // Navigate to the update form, passing the course data as state
+        navigate("/updateCourse", { state: { course } });
+    };
+
     return(<div>
         <Card className="text-center">
             <CardBody>
@@ -27,7 +34,9 @@ function Course({course}){
                     <Button color="danger" onClick={()=>{
                         deleteCourse(course.id);
                     }} >Delete</Button>
-                    <Button color="warning ms-3"  >Update</Button>
+
+
+                    <Button color="warning ms-3"  onClick={handleUpdate} >Update</Button>
                 </Container>
             </CardBody>
         </Card>

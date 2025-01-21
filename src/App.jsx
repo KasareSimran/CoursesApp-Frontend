@@ -10,6 +10,7 @@ import AllCourses from './components/AllCourses.jsx'
 import AddCourses from './components/AddCourse.jsx'
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
+import UpdateCourse from './components/UpdateCourse.jsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/all-courses' Component={AllCourses} exact/>
         <Route path='/contact' Component={Contact} exact/>
         <Route path='/about' Component={About} exact/>
+        <Route path='/updateCourse' Component={UpdateCourse} exact/>
         
 
         </Routes>
