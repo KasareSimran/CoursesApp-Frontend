@@ -1,5 +1,4 @@
 
-import './App.css'
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify'
 import { Container,Row,Col} from 'reactstrap'
@@ -9,6 +8,8 @@ import Header from './components/Header.jsx'
 import Home from './components/Home.jsx'
 import AllCourses from './components/AllCourses.jsx'
 import AddCourses from './components/AddCourse.jsx'
+import Contact from './components/Contact.jsx';
+import About from './components/About.jsx';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
         <Route path='/home' Component={Home} exact/>
         <Route path='/add-course' Component={AddCourses} exact/>
         <Route path='/all-courses' Component={AllCourses} exact/>
+        <Route path='/contact' Component={Contact} exact/>
+        <Route path='/about' Component={About} exact/>
+        
+
         </Routes>
         </Col>
 

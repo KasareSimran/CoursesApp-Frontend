@@ -48,7 +48,7 @@ function AddCourse (){
             (error)=>{
                 console.log(error)
                 console.log("error")
-                toast.success("Error!!!");
+                toast.error("Error!!!");
             }
         )
 
