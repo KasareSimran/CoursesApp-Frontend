@@ -12,7 +12,11 @@ function AddCourse (){
     },[])
 
 
-    const [addCourse,setAddCourse]=useState({});
+    const [addCourse,setAddCourse]=useState({
+        id: '', // default value is an empty string, not 0
+        title: '',
+        description: ''
+    });
 
     //form handling function
     const handleForm=(e)=>{
@@ -25,11 +29,20 @@ function AddCourse (){
 
     //creating function to post data on server
     const postDataToServer =(addCourse)=>{
+
+
+        if (!addCourse.id || !addCourse.title || !addCourse.description) {
+            toast.error("Please fill out all fields before submitting");
+            return;
+        }
+
+
         axios.post(`${main_url}/courses`,addCourse).then(
             (response)=>{
                 console.log(response)
                 console.log("success");
                 toast.success("Course added successfully");
+                setAddCourse({ id: '', title: '', description: '' });
                 
             },
             (error)=>{
@@ -49,7 +62,7 @@ function AddCourse (){
             <Form onSubmit={handleForm}>
                 <FormGroup>
                     <label htmlFor='userId'>Course Id</label>
-                    <Input type='text' placeholder='Enter here' name='userId' id='userId'
+                    <Input type='text' placeholder='Enter here' name='userId' id='userId' value={addCourse.id}
                     onChange={(e)=>{
                         setAddCourse({...addCourse,id:e.target.value})
                     }}
@@ -58,7 +71,7 @@ function AddCourse (){
 
                 <FormGroup>
                     <label htmlFor='title'>Course Title</label>
-                    <Input type='text' placeholder='Enter text here'  id='text'
+                    <Input type='text' placeholder='Enter text here'  id='text'  value={addCourse.title}
                      onChange={(e)=>{
                         setAddCourse({...addCourse,title:e.target.value})
                     }}
@@ -67,7 +80,7 @@ function AddCourse (){
 
                 <FormGroup>
                     <label htmlFor='description'>Course description</label>
-                    <Input type='textarea' placeholder='Enter description here'  id='description' style={{height: 150}}
+                    <Input type='textarea' placeholder='Enter description here'  id='description' value={addCourse.description} style={{height: 150}}
                      onChange={(e)=>{
                         setAddCourse({...addCourse,description:e.target.value})
                     }}
@@ -76,7 +89,7 @@ function AddCourse (){
 
                 <Container className='text-center'>
                     <Button type='submit'  color='success'>Add Course</Button>
-                    <Button type='reset' color='warning mx-2'>Clear</Button>
+                    <Button onClick={() => setAddCourse({ id: '', title: '', description: '' })} color='warning mx-2'>Clear</Button>
                 </Container>
             </Form>
         </div>
