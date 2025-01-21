@@ -45,7 +45,7 @@ function AddCourse (){
                 setAddCourse({ id: '', title: '', description: '' });
                 
             },
-            (error)=>{
+            (error )=>{
                 console.log(error)
                 console.log("error")
                 toast.error("Error!!!");

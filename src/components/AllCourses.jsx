@@ -10,7 +10,7 @@ function AllCourses(){
 
     const isMounted = useRef(false);  
 
-    useEffect(()=>{
+    useEffect(( )=>{
         document.title="All Courses"
     },[])
 

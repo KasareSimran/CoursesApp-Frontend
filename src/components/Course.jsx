@@ -22,7 +22,7 @@ function Course({course}){
         <Card className="text-center">
             <CardBody>
                 <CardSubtitle className="fw-bold">{course.title}</CardSubtitle>
-                <CardText>{course.description}</CardText>
+                <CardText>{course.description }</CardText>
                 <Container className="text-center">
                     <Button color="danger" onClick={()=>{
                         deleteCourse(course.id);

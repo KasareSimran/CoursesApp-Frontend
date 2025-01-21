@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 
 function Home(){
-    useEffect(()=>{
+    useEffect(( )=>{
             document.title="Home || Courses App"
         },[])
     return(<div>

@@ -1,4 +1,4 @@
-import { Container, Row} from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
 function About() {
   return (

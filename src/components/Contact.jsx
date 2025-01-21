@@ -3,7 +3,7 @@ import emailImg from "../assets/emailIcon.png";
 import linkedinImg from "../assets/linkedinIcon.png";
 import githubImg from "../assets/githubIcon.png";
 
-const Contact = () => {
+const Contact = ( ) => {
   return (
     <Container className="p-5 my-3 bg-light border rounded shadow">
     <h1 className="text-center display-5">Contact Us</h1>
